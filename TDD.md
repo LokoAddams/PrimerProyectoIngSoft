@@ -25,11 +25,11 @@
 
 * **ROJO:** escribo `2025-09-10 21:10` como salida y se ve igual.
 * **VERDE:** guardar y mostrar hora de salida.
-* **Refactor:** función común para formatear/mostrar horas.
+* **Refactor:** función común para formatear/validar horas.
 * **Commits:**
   `test: muestra hora de salida en pantalla` · 
   `feat: ingresar y visualizar hora de salida` · 
-  `refactor: extrae función para formatear hora`
+  `refactor: función común para formatear/validar horas`
 
 ## 3) Error si la salida es antes que la entrada
 

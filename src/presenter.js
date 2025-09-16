@@ -11,7 +11,7 @@ calcularBtn.addEventListener("click", () => {
   calculadoraTarifas.setFechaSalida(fechaSalida);
   const fechaFormateadaSalida = calculadoraTarifas.obtenerFechaSalidaFormateada();
   resultadoDivSalida.textContent = fechaFormateadaSalida;
-  calculadoraTarifas.setFecha(fechaEntrada);
-  const fechaFormateada = calculadoraTarifas.obtenerFechaFormateada();
-  resultadoDiv.textContent = fechaFormateada;
+  calculadoraTarifas.setFechaEntrada(fechaEntrada);
+  const fechaFormateadaEntrada = calculadoraTarifas.obtenerFechaEntradaFormateada();
+  resultadoDiv.textContent = fechaFormateadaEntrada;
 });

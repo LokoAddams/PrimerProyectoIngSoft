@@ -171,12 +171,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "ab6ef78320aa61321c9fbbe2fc8ed3717fe312be",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-16T10:39:49.000Z",
       "message": "feat: ingresar y visualizar hora de salida",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/ab6ef78320aa61321c9fbbe2fc8ed3717fe312be"
     },
     "stats": {
       "total": 69,
@@ -185,6 +185,25 @@
       "date": "2025-09-16"
     },
     "coverage": 92,
+    "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-16T10:49:15.000Z",
+      "message": "refactor: función común para formatear/validar horas",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 66,
+      "additions": 29,
+      "deletions": 37,
+      "date": "2025-09-16"
+    },
+    "coverage": 100,
     "test_count": 3,
     "failed_tests": 0,
     "conclusion": "success"
