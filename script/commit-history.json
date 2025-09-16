@@ -19,12 +19,12 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "c6ad1fb53e05c30b7da43f4c2f40c8603b5a9541",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-16T08:28:30.000Z",
       "message": "refactor: initial commit",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/c6ad1fb53e05c30b7da43f4c2f40c8603b5a9541"
     },
     "stats": {
       "total": 14,
@@ -36,5 +36,24 @@
     "test_count": 0,
     "failed_tests": 0,
     "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-16T09:59:51.000Z",
+      "message": "test: muestra hora de entrada en pantalla",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 17,
+      "deletions": 0,
+      "date": "2025-09-16"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]
