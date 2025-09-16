@@ -11,6 +11,17 @@
   2. `feat: ingresar y visualizar hora de entrada`
   3. `refactor: nombres claros para campo de entrada`
 
+## 1.1) Ingresar la hora de ENTRADA y que se vea en pantalla
+
+* **Prueba (ROJO):** escribo `2025` y muestra un mensaje de error de formato invalido.
+* **Implementación (VERDE):** indentificar formatos invalidos.
+* **Refactor:** Objeto calculadora tarifas global para presenter.js
+* **Commits:**
+
+  1. `test: formato invalido`
+  2. `feat: retornar y visualizar mensaje de formato invalido`
+  3. `refactor: `
+
 ## 2) Ingresar la hora de SALIDA y que se vea en pantalla
 
 * **ROJO:** escribo `2025-09-10 21:10` como salida y se ve igual.

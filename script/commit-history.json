@@ -95,12 +95,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "d7e277238f1010a5af16ba12930db5739adf73d0",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-16T10:06:53.000Z",
       "message": "test: formato invalido",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/d7e277238f1010a5af16ba12930db5739adf73d0"
     },
     "stats": {
       "total": 8,
@@ -112,5 +112,24 @@
     "test_count": 2,
     "failed_tests": 1,
     "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-16T10:17:20.000Z",
+      "message": "feat: retornar y visualizar mensaje de formato invalido",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 26,
+      "additions": 23,
+      "deletions": 3,
+      "date": "2025-09-16"
+    },
+    "coverage": 100,
+    "test_count": 2,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]
