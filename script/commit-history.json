@@ -57,17 +57,36 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "1c30d6fcb07ea9e8a29327b5feb4bbff57d17846",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-16T10:04:04.000Z",
       "message": "feat: ingresar y visualizar hora de entrada",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/1c30d6fcb07ea9e8a29327b5feb4bbff57d17846"
     },
     "stats": {
       "total": 22,
       "additions": 21,
       "deletions": 1,
+      "date": "2025-09-16"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-16T10:06:05.000Z",
+      "message": "refactor: usar tipo de dato \"Date\"",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 9,
+      "additions": 7,
+      "deletions": 2,
       "date": "2025-09-16"
     },
     "coverage": 100,
