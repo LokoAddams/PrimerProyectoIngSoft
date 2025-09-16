@@ -38,12 +38,12 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "d6d16afd261ef0830e55a7ecdea00e45fb7e352e",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-16T09:59:51.000Z",
       "message": "test: muestra hora de entrada en pantalla",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/d6d16afd261ef0830e55a7ecdea00e45fb7e352e"
     },
     "stats": {
       "total": 17,
@@ -55,5 +55,24 @@
     "test_count": 1,
     "failed_tests": 1,
     "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-16T10:04:04.000Z",
+      "message": "feat: ingresar y visualizar hora de entrada",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 22,
+      "additions": 21,
+      "deletions": 1,
+      "date": "2025-09-16"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]
