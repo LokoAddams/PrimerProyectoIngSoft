@@ -2,7 +2,6 @@
 ## 1) Ingresar la hora de ENTRADA y que se vea en pantalla
 
 * **Prueba (ROJO):** escribo `2025-09-10 18:00` como entrada y la pantalla la muestra igual.
-  *Nombre sugerido:* `muestra_horaEntrada_en_pantalla`
 * **Implementación (VERDE):** guardar y renderizar la hora de entrada en su campo/etiqueta.
 * **Refactor:** nombres claros (ej. `entradaHora`).
 * **Commits:**
@@ -11,7 +10,7 @@
   2. `feat: ingresar y visualizar hora de entrada`
   3. `refactor: nombres claros para campo de entrada`
 
-## 1.1) Ingresar la hora de ENTRADA y que se vea en pantalla
+## 2) Ingresar la hora de ENTRADA y que se vea en pantalla
 
 * **Prueba (ROJO):** escribo `2025` y muestra un mensaje de error de formato invalido.
 * **Implementación (VERDE):** indentificar formatos invalidos.
@@ -22,14 +21,15 @@
   2. `feat: retornar y visualizar mensaje de formato invalido`
   3. `refactor: hacer objeto "calculadoraTarifas" tarifas global para presenter.js y setter` 
 
-## 2) Ingresar la hora de SALIDA y que se vea en pantalla
+## 3) Ingresar la hora de SALIDA y que se vea en pantalla
 
 * **ROJO:** escribo `2025-09-10 21:10` como salida y se ve igual.
-  *Prueba:* `muestra_horaSalida_en_pantalla`
 * **VERDE:** guardar y mostrar hora de salida.
 * **Refactor:** función común para formatear/mostrar horas.
 * **Commits:**
-  `test: muestra hora de salida en pantalla` · `feat: ingresar y visualizar hora de salida` · `refactor: extrae función para formatear hora`
+  `test: muestra hora de salida en pantalla` · 
+  `feat: ingresar y visualizar hora de salida` · 
+  `refactor: extrae función para formatear hora`
 
 ## 3) Error si la salida es antes que la entrada
 

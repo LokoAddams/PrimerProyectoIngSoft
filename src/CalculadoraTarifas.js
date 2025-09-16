@@ -23,5 +23,8 @@ class CalculadoraTarifas {
     const minutos = String(this.#fecha.getMinutes()).padStart(2, '0');
     return `${anio}-${mes}-${dia} ${horas}:${minutos}`;
   }
+  obtenerFechaSalidaFormateada() {
+    
+  }
 }
 module.exports = CalculadoraTarifas;
