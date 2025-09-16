@@ -6,10 +6,18 @@
   <body>
     <h1>Estacionamientos</h1>
     <h2>Calculadora de Tarifas entrada</h2>
+    <p>fecha-entrada : </p>
     <input type="text" id="fecha-entrada" placeholder="YYYY-MM-DD HH:MM" />
+    <p>fecha-salida : </p>
+    <input type="text" id="fecha-salida" placeholder="YYYY-MM-DD HH:MM" />
     <button id="calcular">Calcular</button>
     <h2>Resultados</h2>
-    <div id="resultado"></div>
+    <p>fecha-entrada : 
+      <div id="resultado-fecha-entrada"></div>
+    </p>
+    <p>fecha-salida : 
+      <div id="resultado-fecha-salida"></div>
+    </p>
     <script type="module" src="./src/presenter.js"></script>
   </body>
 </html>

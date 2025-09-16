@@ -21,7 +21,7 @@ describe("Formato de fecha invalido", () => {
 describe("Ingresar la hora de SALIDA y que se vea en pantalla", () => {
   it("Deberia ingresar la hora de salida y verla en pantalla", () => {
     const calculadoraTarifas = new CalculadoraTarifas();
-    calculadoraTarifas.setFecha('2025-09-10 20:00');
+    calculadoraTarifas.setFechaSalida('2025-09-10 20:00');
     const obtenerFecha = calculadoraTarifas.obtenerFechaSalidaFormateada();
     expect(obtenerFecha).toEqual('2025-09-10 20:00');
   })
