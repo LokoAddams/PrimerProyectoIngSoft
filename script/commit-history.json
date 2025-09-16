@@ -114,17 +114,36 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "c6583c50c498730a46629a8b3927d4ea7836f1f8",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-16T10:17:20.000Z",
       "message": "feat: retornar y visualizar mensaje de formato invalido",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/c6583c50c498730a46629a8b3927d4ea7836f1f8"
     },
     "stats": {
       "total": 26,
       "additions": 23,
       "deletions": 3,
+      "date": "2025-09-16"
+    },
+    "coverage": 100,
+    "test_count": 2,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-16T10:22:08.000Z",
+      "message": "refactor: hacer objeto \"calculadoraTarifas\" tarifas global para presenter.js y setter",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 23,
+      "additions": 13,
+      "deletions": 10,
       "date": "2025-09-16"
     },
     "coverage": 100,

@@ -1,12 +1,14 @@
 class CalculadoraTarifas {
   #fecha;
-  constructor(nuevaFecha = undefined) {
+  constructor() {
+    
+  }
+  setFecha(nuevaFecha) {
     const formatoValido = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/;
 
     if (formatoValido.test(nuevaFecha)) {
       this.#fecha = new Date(nuevaFecha);
-    }
-    else{
+    } else {
       this.#fecha = undefined;
     }
   }

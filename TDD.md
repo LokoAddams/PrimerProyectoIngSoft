@@ -15,12 +15,12 @@
 
 * **Prueba (ROJO):** escribo `2025` y muestra un mensaje de error de formato invalido.
 * **Implementación (VERDE):** indentificar formatos invalidos.
-* **Refactor:** Objeto calculadora tarifas global para presenter.js
+* **Refactor:** hacer objeto "calculadoraTarifas" tarifas global para presenter.js y setter
 * **Commits:**
 
   1. `test: formato invalido`
   2. `feat: retornar y visualizar mensaje de formato invalido`
-  3. `refactor: `
+  3. `refactor: hacer objeto "calculadoraTarifas" tarifas global para presenter.js y setter` 
 
 ## 2) Ingresar la hora de SALIDA y que se vea en pantalla
 
