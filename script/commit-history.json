@@ -76,12 +76,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "6ef54254b541844f75568a8f33907f110ae649ba",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-16T10:06:05.000Z",
       "message": "refactor: usar tipo de dato \"Date\"",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/6ef54254b541844f75568a8f33907f110ae649ba"
     },
     "stats": {
       "total": 9,
@@ -93,5 +93,24 @@
     "test_count": 1,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-16T10:06:53.000Z",
+      "message": "test: formato invalido",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 8,
+      "additions": 8,
+      "deletions": 0,
+      "date": "2025-09-16"
+    },
+    "coverage": 100,
+    "test_count": 2,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]
