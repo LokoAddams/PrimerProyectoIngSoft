@@ -570,17 +570,36 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "fc9c9e307a1743107784b8813d3710087c041193",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T12:33:56.000Z",
       "message": "feat: penalidad ticket perdido",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/fc9c9e307a1743107784b8813d3710087c041193"
     },
     "stats": {
       "total": 107,
       "additions": 61,
       "deletions": 46,
+      "date": "2025-09-18"
+    },
+    "coverage": 88.75,
+    "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T12:36:36.000Z",
+      "message": "refactor: activa/desactiva campo en UI por con ticket/sin ticket",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 11,
+      "additions": 9,
+      "deletions": 2,
       "date": "2025-09-18"
     },
     "coverage": 88.75,

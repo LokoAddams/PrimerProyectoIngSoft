@@ -99,6 +99,8 @@
 * **VERDE:** si `ticketPerdido=true`, devolver 80 y ocultar detalle.
 * **Refactor:** desactivar campos de hora si está perdido.
 * **Commits:**
-  `test: ticket perdido cobra 80` · `feat: penalidad ticket perdido` · `refactor: desactiva campos si perdido`
+  `test: ticket perdido cobra 80` · 
+  `feat: penalidad ticket perdido` · 
+  `refactor: activa/desactiva campo en UI por con ticket/sin ticket`
 
 

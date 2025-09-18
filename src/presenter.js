@@ -11,6 +11,7 @@ const calculadoraTarifas = new CalculadoraTarifas();
 calcularBtn.addEventListener("click", () => {
   const fechaEntrada = document.querySelector("#fecha-entrada").value;
   const fechaSalida = document.querySelector("#fecha-salida").value;
+  const ticketPerdido = document.querySelector("#ticket-perdido").checked;
   calculadoraTarifas.setFechaEntrada(fechaEntrada);
   calculadoraTarifas.setFechaSalida(fechaSalida);
   const fechaFormateadaEntrada = calculadoraTarifas.obtenerFechaEntradaFormateada();
@@ -18,7 +19,7 @@ calcularBtn.addEventListener("click", () => {
   const fechaFormateadaSalida = calculadoraTarifas.obtenerFechaSalidaFormateada();
   resultadoDivSalida.textContent = fechaFormateadaSalida;
   // Mostrar resultado del cálculo
-  const resultado = calculadoraTarifas.calcularTarifa();
+  const resultado = calculadoraTarifas.calcularTarifa(ticketPerdido);
   // Icono de éxito o error
   if (resultado.error) {
     iconoResultado.textContent = "❌";
