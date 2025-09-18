@@ -42,24 +42,16 @@ class CalculadoraTarifas {
   #inicioNocturno = 22; // 10 PM
   #finNocturno = 6;    // 6 AM
 
+  #esHoraNocturna(hora) {
+    return hora >= this.#inicioNocturno || hora < this.#finNocturno;
+  }
+
   #calcularHorasCobrables(inicio, fin) {
     const msPorHora = 1000 * 60 * 60;
     const diffMs = fin - inicio;
     const horasExactas = diffMs / msPorHora;
     const horasCobrables = Math.ceil(horasExactas);
     return { horasExactas, horasCobrables };
-  }
-
-  #determinarTarifaAplicada() {
-    const horaEntrada = this.#fechaEntrada.getHours();
-    const horaSalida = this.#fechaSalida.getHours();
-
-    // Lógica simple para tarifa nocturna: si la mayor parte del tiempo es nocturno, se aplica tarifa nocturna.
-    // Esto es una simplificación para pasar el test actual.
-    const esPeriodoNocturno = (horaEntrada >= this.#inicioNocturno || horaEntrada < this.#finNocturno) &&
-                              (horaSalida >= this.#inicioNocturno || horaSalida < this.#finNocturno);
-
-    return esPeriodoNocturno ? this.#precioNocturnoHora : this.#precioNormalHora;
   }
 
   calcularTarifa() {
@@ -74,11 +66,32 @@ class CalculadoraTarifas {
 
     const { horasExactas, horasCobrables } = this.#calcularHorasCobrables(this.#fechaEntrada, this.#fechaSalida);
     
-    const tarifaAplicada = this.#determinarTarifaAplicada();
-    const total = horasCobrables * tarifaAplicada;
+    if (horasCobrables === 0 && horasExactas > 0) { // Estancias muy cortas se cobran como 1h
+        const tarifaAplicada = this.#esHoraNocturna(this.#fechaEntrada.getHours()) ? this.#precioNocturnoHora : this.#precioNormalHora;
+        return {
+            totalFormateado: `Total: Bs ${tarifaAplicada.toFixed(2)}`,
+            detalles: `Horas exactas: ${horasExactas.toFixed(2)}. Horas a cobrar: 1. Tarifa: ${tarifaAplicada} Bs/h. (Se aplicó redondeo hacia arriba)`
+        };
+    }
 
-    let tarifaNombre = tarifaAplicada === this.#precioNocturnoHora ? "Nocturna" : "Normal";
-    let detalles = `Horas exactas: ${horasExactas.toFixed(2)}. Horas a cobrar: ${horasCobrables}. Tarifa ${tarifaNombre}: ${tarifaAplicada} Bs/h.`;
+    let total = 0;
+    let horasDiurnas = 0;
+    let horasNocturnas = 0;
+    let fechaCursor = new Date(this.#fechaEntrada);
+
+    for (let i = 0; i < horasCobrables; i++) {
+        const horaActual = fechaCursor.getHours();
+        if (this.#esHoraNocturna(horaActual)) {
+            horasNocturnas++;
+        } else {
+            horasDiurnas++;
+        }
+        fechaCursor.setHours(fechaCursor.getHours() + 1);
+    }
+    
+    total = (horasDiurnas * this.#precioNormalHora) + (horasNocturnas * this.#precioNocturnoHora);
+
+    let detalles = `Horas Diurnas: ${horasDiurnas} (Bs ${this.#precioNormalHora}/h). Horas Nocturnas: ${horasNocturnas} (Bs ${this.#precioNocturnoHora}/h).`;
     if (horasCobrables > horasExactas) {
         detalles += ` (Se aplicó redondeo hacia arriba)`;
     }

@@ -73,9 +73,9 @@ describe("Total NOCTURNO simple (22:00pm–06:00am a 6 Bs/h)", () => {
 describe("total nocturno  complicado (10:00am–06:00am a 6 Bs/h solo horas dentro de ese rango)", () => {
   it("Deberia calcular la tarifa para un periodo nocturno complicado solo aplicando la tarfica de 6 bs hora a las horas entre las 22pm y las 06am", () => {
     const calculadoraTarifas = new CalculadoraTarifas();
-    calculadoraTarifas.setFechaEntrada('2025-09-10 10:00am');
+    calculadoraTarifas.setFechaEntrada('2025-09-10 10:00');
     calculadoraTarifas.setFechaSalida('2025-09-11 13:10'); // Cruza la medianoche
     const resultado = calculadoraTarifas.calcularTarifa();
-    expect(resultado.totalFormateado).toEqual('Total: Bs 12.00');
+    expect(resultado.totalFormateado).toEqual('Total: Bs 248.00');
   });
 });

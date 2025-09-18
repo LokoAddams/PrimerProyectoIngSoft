@@ -79,16 +79,8 @@
 * **Commits:**
   `test: total nocturno  complicado (10:00am–13:00pm(dia siguiente) a 6 Bs/h solo horas dentro de ese rango)` ·
    `feat: tarifa nocturna  complicado (10:00am–13:00pm(dia siguiente) a 6 Bs/h solo horas dentro de ese rango)` ·
-    `refactor: función calcularHorasNocturnas + detalles`
-## 8) Separar por DÍAS con subtotales (cruce de medianoche)
+    `refactor: detalles UI`
 
-* **ROJO:** `21:00 → 01:15` → Día 1 ≈ **Bs 22.00**, Día 2 ≈ **Bs 12.00**, Total **Bs 34.00** (según desglose).
-* **VERDE:** cortar por día calendario y calcular subtotales por día.
-* **Refactor:** `partirPorDia(inicio, fin)`.
-* **Commits:**
-  `test: separa por días con subtotales` · 
-  `feat: desglose por día` · 
-  `refactor: función partirPorDia`
 
 ## 10) Aplicar TOPE diario de 50 Bs
 

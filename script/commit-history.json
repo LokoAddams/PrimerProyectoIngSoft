@@ -475,12 +475,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "8404d100f69808f17c033bdf3408a417c422adc5",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T10:33:37.000Z",
       "message": "test: total nocturno  complicado (10:00am–13:10pm a 6 Bs/h solo horas dentro del rango)",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/8404d100f69808f17c033bdf3408a417c422adc5"
     },
     "stats": {
       "total": 16,
@@ -492,5 +492,24 @@
     "test_count": 8,
     "failed_tests": 1,
     "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T10:44:14.000Z",
+      "message": "feat: tarifa nocturna  complicado (10:00am–13:00pm(dia siguiente) a 6 Bs/h solo horas dentro de ese rango)",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 59,
+      "additions": 32,
+      "deletions": 27,
+      "date": "2025-09-18"
+    },
+    "coverage": 94,
+    "test_count": 8,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]
