@@ -36,3 +36,14 @@ describe("Error si CALCULAR no retorna nada", () => {
     expect(resultado).toEqual('Total: Bs 10.00');
   })
 })
+
+// 5
+describe("Error si la salida es antes que la entrada", () => {
+  it("Deberia mostrar un mensaje de error si la fecha de salida es anterior a la de entrada", () => {
+    const calculadoraTarifas = new CalculadoraTarifas();
+    calculadoraTarifas.setFechaEntrada('2025-09-10 20:00');
+    calculadoraTarifas.setFechaSalida('2025-09-10 19:30');
+    const resultado = calculadoraTarifas.calcularTarifa();
+    expect(resultado).toEqual('La fecha de salida no puede ser anterior a la fecha de entrada.');
+  });
+});

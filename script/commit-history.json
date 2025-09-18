@@ -266,12 +266,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "265b15b0196ac3158a15fd4970fcc470ea08f136",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T04:48:28.000Z",
       "message": "refactor: mostrar mensaje de exito o fallo en UI",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/265b15b0196ac3158a15fd4970fcc470ea08f136"
     },
     "stats": {
       "total": 19,
@@ -283,5 +283,24 @@
     "test_count": 4,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T04:52:03.000Z",
+      "message": "test: no da error si salida < entrada",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 18,
+      "additions": 15,
+      "deletions": 3,
+      "date": "2025-09-18"
+    },
+    "coverage": 100,
+    "test_count": 5,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]

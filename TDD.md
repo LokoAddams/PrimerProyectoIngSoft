@@ -37,17 +37,18 @@
 * **VERDE:** con datos cargados, al presionar **Calcular** se actualiza total.
 * **Refactor:** mostrar mensaje de exito UI.
 * **Commits:**
-  `test: al presionar Calcular no retorna nada` · 
+  `test: al presionar Calcular no retorna nada (en el git me equivoque y le puse "test: al presionar Calcular se actualiza total")` · 
   `feat: acción de cálculo en botón` · 
   `refactor: mostrar mensaje de exito o fallo en UI`
 
-## 4) Error si la salida es antes que la entrada
+## 5) Error si la salida es antes que la entrada
 
 * **ROJO:** entrada `20:00`, salida `19:30` → se ve “La salida no puede ser anterior a la entrada”.
 * **VERDE:** comparar fechas; si es inválido, mostrar mensaje y bloquear cálculo.
 * **Refactor:** util `showError(mensaje)`.
 * **Commits:**
-  `test: error si salida < entrada` · `feat: validación de horario (salida >= entrada)` · `refactor: utilitario showError`
+  `test: no da error si salida < entrada` · 
+  `feat: validación de horario (salida >= entrada)` · `refactor: utilitario showError`
 
 ## 4) Calcular horas cobrables (redondeo hacia arriba)
 
