@@ -71,10 +71,9 @@
    `feat: tarifa nocturna (6 Bs/h)` ·
     `refactor: función calcularHorasNocturnas + detalles`
 
-## 9) Separar por DÍAS con subtotales (cruce de medianoche)
+## 8) Separar por DÍAS con subtotales (cruce de medianoche)
 
 * **ROJO:** `21:00 → 01:15` → Día 1 ≈ **Bs 22.00**, Día 2 ≈ **Bs 12.00**, Total **Bs 34.00** (según desglose).
-  *Prueba:* `separa_por_dias_con_subtotales`
 * **VERDE:** cortar por día calendario y calcular subtotales por día.
 * **Refactor:** `partirPorDia(inicio, fin)`.
 * **Commits:**

@@ -418,12 +418,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "2b78a7046074d2f56d9fd74e2e7088b740f39c1d",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T10:15:40.000Z",
       "message": "test: total nocturno (22pm-06am)",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/2b78a7046074d2f56d9fd74e2e7088b740f39c1d"
     },
     "stats": {
       "total": 45,
@@ -435,5 +435,24 @@
     "test_count": 7,
     "failed_tests": 1,
     "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T10:18:34.000Z",
+      "message": "feat: tarifa nocturna (6 Bs/h)",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 20,
+      "additions": 16,
+      "deletions": 4,
+      "date": "2025-09-18"
+    },
+    "coverage": 97.44,
+    "test_count": 7,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]
