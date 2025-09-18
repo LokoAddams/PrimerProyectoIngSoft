@@ -39,9 +39,16 @@ class CalculadoraTarifas {
   }
   #precioNormalHora = 10;
   calcularTarifa() {
-    // Calculo básico: diferencia en horas, redondeo hacia arriba, tarifa fija 10 Bs/h
+    // Validación: si fechas no válidas, retorna NaN
+    if (!this.#fechaEntrada || !this.#fechaSalida) {
+      return NaN;
+    }
     const msPorHora = 1000 * 60 * 60;
     const diffMs = this.#fechaSalida - this.#fechaEntrada;
+    if (diffMs < 0) {
+      // Si salida < entrada, retorna NaN para que la UI muestre error
+      return 'La fecha de salida no puede ser anterior a la fecha de entrada.';
+    }
     const horas = (diffMs / msPorHora);
     const total = horas * this.#precioNormalHora;
     return `Total: Bs ${total.toFixed(2)}`;
