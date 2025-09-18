@@ -60,10 +60,9 @@
   `feat: lógica de horas cobrables con UI` · 
   `refactor: función calcularHorasCobrables`
 
-## 5) Total DIURNO simple (10 Bs/h)
+## 7) Total DIURNO simple (10 Bs/h)
 
 * **ROJO:** `18:00 → 21:10` (todo diurno) → **Bs 40.00** (4×10).
-  *Prueba:* `calcula_total_diurno_simple`
 * **VERDE:** multiplicar horas diurnas × 10 Bs.
 * **Refactor:** servicio `tarifas.diurno()`.
 * **Commits:**

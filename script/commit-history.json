@@ -380,12 +380,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "d57126031d8b08cd22eec4953999d62f99a239b9",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T10:09:38.000Z",
       "message": "feat: lógica de horas cobrables con UI",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/d57126031d8b08cd22eec4953999d62f99a239b9"
     },
     "stats": {
       "total": 54,
@@ -394,6 +394,25 @@
       "date": "2025-09-18"
     },
     "coverage": 96.67,
+    "test_count": 6,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T10:11:41.000Z",
+      "message": "refactor: función calcularHorasCobrables",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 21,
+      "additions": 14,
+      "deletions": 7,
+      "date": "2025-09-18"
+    },
+    "coverage": 96.88,
     "test_count": 6,
     "failed_tests": 0,
     "conclusion": "success"

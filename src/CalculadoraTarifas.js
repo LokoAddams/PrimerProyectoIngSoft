@@ -38,18 +38,26 @@ class CalculadoraTarifas {
     return this.#formatearFecha(this.#fechaSalida);
   }
   #precioNormalHora = 10;
+
+  #calcularHorasCobrables(inicio, fin) {
+    const msPorHora = 1000 * 60 * 60;
+    const diffMs = fin - inicio;
+    const horasExactas = diffMs / msPorHora;
+    const horasCobrables = Math.ceil(horasExactas);
+    return { horasExactas, horasCobrables };
+  }
+
   calcularTarifa() {
     // Validación: si fechas no válidas, retorna un objeto de error
     if (!this.#fechaEntrada || !this.#fechaSalida) {
       return { error: 'Formato de fecha inválido. Use YYYY-MM-DD HH:MM.' };
     }
-    const msPorHora = 1000 * 60 * 60;
-    const diffMs = this.#fechaSalida - this.#fechaEntrada;
-    if (diffMs < 0) {
+    
+    if (this.#fechaSalida < this.#fechaEntrada) {
       return { error: 'La fecha de salida no puede ser anterior a la fecha de entrada.' };
     }
-    const horasExactas = diffMs / msPorHora;
-    const horasCobrables = Math.ceil(horasExactas);
+
+    const { horasExactas, horasCobrables } = this.#calcularHorasCobrables(this.#fechaEntrada, this.#fechaSalida);
     const total = horasCobrables * this.#precioNormalHora;
 
     let detalles = `Horas exactas: ${horasExactas.toFixed(2)}. Horas a cobrar: ${horasCobrables}.`;
