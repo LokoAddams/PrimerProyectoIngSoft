@@ -456,12 +456,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "84f7fdf4943df9e2f65b1159869671c41e35c2e0",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T10:29:47.000Z",
       "message": "refactor: función calcularHorasNocturnas() + detalles",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/84f7fdf4943df9e2f65b1159869671c41e35c2e0"
     },
     "stats": {
       "total": 51,
@@ -471,6 +471,25 @@
     },
     "coverage": 97.56,
     "test_count": 7,
+    "failed_tests": 1,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T10:33:37.000Z",
+      "message": "test: total nocturno  complicado (10:00am–13:10pm a 6 Bs/h solo horas dentro del rango)",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 16,
+      "additions": 13,
+      "deletions": 3,
+      "date": "2025-09-18"
+    },
+    "coverage": 100,
+    "test_count": 8,
     "failed_tests": 1,
     "conclusion": "failure"
   }

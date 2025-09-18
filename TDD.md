@@ -73,12 +73,12 @@
 
 ## 7.1) Total NOCTURNO complicado (10:00am–06:00am a 6 Bs/h solo horas dentro de ese rango)
 
-* **ROJO:** `10:20 → 01:10` → **2 h × 6 = Bs 12.00 de 22:00pm–06:00am** .
+* **ROJO:** `10:20 → 13:10(dia siguiente)` → **2 h × 6 = Bs 12.00 de 22:00pm–06:00am** .
 * **VERDE:** detectar ventana nocturna y aplicar 6 Bs/h (redondeo).
 * **Refactor:** `calcularHorasNocturnas() + detalles`.
 * **Commits:**
-  `test: total nocturno  complicado (10:00am–06:00am a 6 Bs/h solo horas dentro de ese rango)` ·
-   `feat: tarifa nocturna  complicado (10:00am–06:00am a 6 Bs/h solo horas dentro de ese rango)` ·
+  `test: total nocturno  complicado (10:00am–13:00pm(dia siguiente) a 6 Bs/h solo horas dentro de ese rango)` ·
+   `feat: tarifa nocturna  complicado (10:00am–13:00pm(dia siguiente) a 6 Bs/h solo horas dentro de ese rango)` ·
     `refactor: función calcularHorasNocturnas + detalles`
 ## 8) Separar por DÍAS con subtotales (cruce de medianoche)
 
