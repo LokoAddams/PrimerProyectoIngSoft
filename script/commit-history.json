@@ -304,11 +304,30 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "ed796d8855a1fc02c681f30f2e601abf5b842ec0",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T05:02:24.000Z",
       "message": "feat: validación de horario (salida >= entrada)",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/ed796d8855a1fc02c681f30f2e601abf5b842ec0"
+    },
+    "stats": {
+      "total": 9,
+      "additions": 8,
+      "deletions": 1,
+      "date": "2025-09-18"
+    },
+    "coverage": 96.3,
+    "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T05:02:50.000Z",
+      "message": "refactor: utilitario showError",
       "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
     },
     "stats": {

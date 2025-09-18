@@ -20,13 +20,20 @@ calcularBtn.addEventListener("click", () => {
   resultadoDivSalida.textContent = fechaFormateadaSalida;
   // Mostrar resultado del cálculo
   const resultado = calculadoraTarifas.calcularTarifa();
-  resultadoCalculo.textContent = resultado;
   // Icono de éxito o error
   if (resultado && resultado.startsWith("Total: Bs") && !resultado.includes("NaN")) {
     iconoResultado.textContent = "✔️";
     iconoResultado.style.color = "green";
+    resultadoCalculo.textContent = resultado;
   } else {
     iconoResultado.textContent = "❌";
     iconoResultado.style.color = "red";
+    if(isNaN(resultado)){
+      resultadoCalculo.textContent = "Total : Error en el cálculo.Verifique datos de entrada.";
+    }
+    else{
+      resultadoCalculo.textContent = resultado;
+      
+    }
   }
 });
