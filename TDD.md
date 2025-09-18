@@ -79,7 +79,7 @@
 * **Commits:**
   `test: total nocturno  complicado (10:00am–13:00pm(dia siguiente) a 6 Bs/h solo horas dentro de ese rango)` ·
    `feat: tarifa nocturna  complicado (10:00am–13:00pm(dia siguiente) a 6 Bs/h solo horas dentro de ese rango)` ·
-    `refactor: detalles UI`
+    `refactor: detalles UI + fix: se estaba contando un dia de mas`
 
 
 ## 10) Aplicar TOPE diario de 50 Bs

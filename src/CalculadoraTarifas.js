@@ -74,24 +74,64 @@ class CalculadoraTarifas {
         };
     }
 
-    let total = 0;
-    let horasDiurnas = 0;
-    let horasNocturnas = 0;
+    let desglosePorDia = {};
     let fechaCursor = new Date(this.#fechaEntrada);
+    // console.log(this.#fechaEntrada);
+    // console.log(this.#fechaSalida);
+    // Itera hora por hora hasta la hora de salida real
+    while (fechaCursor < this.#fechaSalida) {
+        const anio = fechaCursor.getFullYear();
+        const mes = String(fechaCursor.getMonth() + 1).padStart(2, '0');
+        const dia = String(fechaCursor.getDate()).padStart(2, '0');
+        const diaActual = `${anio}-${mes}-${dia}`;
+        console.log("dia actual: " + diaActual);
+        // console.log("fecha cursor:  "+fechaCursor);
+        if (!desglosePorDia[diaActual]) {
+            desglosePorDia[diaActual] = { diurnas: 0, nocturnas: 0 };
+        }
 
-    for (let i = 0; i < horasCobrables; i++) {
         const horaActual = fechaCursor.getHours();
+        console.log("hora actual: " + horaActual);
         if (this.#esHoraNocturna(horaActual)) {
-            horasNocturnas++;
+            desglosePorDia[diaActual].nocturnas++;
         } else {
-            horasDiurnas++;
+            desglosePorDia[diaActual].diurnas++;
         }
         fechaCursor.setHours(fechaCursor.getHours() + 1);
+
+        
+    }
+
+    // Maneja el redondeo de la última hora
+    const horasTotalesContadas = Object.values(desglosePorDia).reduce((acc, val) => acc + val.diurnas + val.nocturnas, 0);
+    if (horasCobrables > horasTotalesContadas) {
+        const diaSalida = this.#fechaSalida.toISOString().split('T')[0];
+        if (!desglosePorDia[diaSalida]) {
+            desglosePorDia[diaSalida] = { diurnas: 0, nocturnas: 0 };
+        }
+        // Asigna la hora de redondeo a la tarifa del momento de la salida
+        if (this.#esHoraNocturna(this.#fechaSalida.getHours())) {
+            desglosePorDia[diaSalida].nocturnas++;
+        } else {
+            desglosePorDia[diaSalida].diurnas++;
+        }
     }
     
-    total = (horasDiurnas * this.#precioNormalHora) + (horasNocturnas * this.#precioNocturnoHora);
+    let detalles = "";
+    let totalHorasDiurnas = 0;
+    let totalHorasNocturnas = 0;
 
-    let detalles = `Horas Diurnas: ${horasDiurnas} (Bs ${this.#precioNormalHora}/h). Horas Nocturnas: ${horasNocturnas} (Bs ${this.#precioNocturnoHora}/h).`;
+    for (const dia in desglosePorDia) {
+        const { diurnas, nocturnas } = desglosePorDia[dia];
+        if (diurnas > 0 || nocturnas > 0) {
+            totalHorasDiurnas += diurnas;
+            totalHorasNocturnas += nocturnas;
+            detalles += `Día ${dia}: ${diurnas} horas diurnas, ${nocturnas} horas nocturnas. `;
+        }
+    }
+
+    let total = (totalHorasDiurnas * this.#precioNormalHora) + (totalHorasNocturnas * this.#precioNocturnoHora);
+
     if (horasCobrables > horasExactas) {
         detalles += ` (Se aplicó redondeo hacia arriba)`;
     }

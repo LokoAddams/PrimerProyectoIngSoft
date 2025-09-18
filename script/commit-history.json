@@ -494,12 +494,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "82621aad26623b1f4bc6f896d64c7631c34b8ba6",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T10:44:14.000Z",
       "message": "feat: tarifa nocturna  complicado (10:00am–13:00pm(dia siguiente) a 6 Bs/h solo horas dentro de ese rango)",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/82621aad26623b1f4bc6f896d64c7631c34b8ba6"
     },
     "stats": {
       "total": 59,
@@ -508,6 +508,25 @@
       "date": "2025-09-18"
     },
     "coverage": 94,
+    "test_count": 8,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T11:14:29.000Z",
+      "message": "refactor: detalles UI + fix: se estaba contando un dia de mas",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 58,
+      "additions": 49,
+      "deletions": 9,
+      "date": "2025-09-18"
+    },
+    "coverage": 87.5,
     "test_count": 8,
     "failed_tests": 0,
     "conclusion": "success"
