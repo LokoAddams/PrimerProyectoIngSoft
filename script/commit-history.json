@@ -532,12 +532,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "06426f3cfc2d3d0833a3ea07cdc563dadbd48a0d",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T11:56:37.000Z",
       "message": "test: aplica tope diario 50 Bs",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/06426f3cfc2d3d0833a3ea07cdc563dadbd48a0d"
     },
     "stats": {
       "total": 73,
@@ -546,6 +546,25 @@
       "date": "2025-09-18"
     },
     "coverage": 87.5,
+    "test_count": 9,
+    "failed_tests": 1,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T12:14:55.000Z",
+      "message": "feat: política de tope por día",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 21,
+      "additions": 16,
+      "deletions": 5,
+      "date": "2025-09-18"
+    },
+    "coverage": 85.19,
     "test_count": 9,
     "failed_tests": 1,
     "conclusion": "failure"

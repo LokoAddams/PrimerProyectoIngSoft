@@ -122,11 +122,24 @@ class CalculadoraTarifas {
     let totalHorasNocturnas = 0;
 
     for (const dia in desglosePorDia) {
-        const { diurnas, nocturnas } = desglosePorDia[dia];
+        var { diurnas, nocturnas } = desglosePorDia[dia];
+        if (diurnas > 0 || nocturnas > 0) {
+            detalles += `Día ${dia}: ${diurnas} horas diurnas, ${nocturnas} horas nocturnas. `;
+        }
+        if(diurnas + nocturnas > 5){
+          diurnas = 5;
+          nocturnas = 0;
+          detalles += ("Tope diario aplicado el dia" + dia + " por horas diurnas.");
+        } 
+        if(nocturnas + diurnas > 5)
+        {
+          nocturnas = 5;
+          diurnas = 0;
+          detalles += ("Tope diario aplicado el dia " + dia + " por horas nocturnas.");
+        }  
         if (diurnas > 0 || nocturnas > 0) {
             totalHorasDiurnas += diurnas;
             totalHorasNocturnas += nocturnas;
-            detalles += `Día ${dia}: ${diurnas} horas diurnas, ${nocturnas} horas nocturnas. `;
         }
     }
 

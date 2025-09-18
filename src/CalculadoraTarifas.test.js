@@ -76,11 +76,9 @@ describe("total nocturno  complicado (10:00am–06:00am a 6 Bs/h solo horas dent
     calculadoraTarifas.setFechaEntrada('2025-09-10 10:00');
     calculadoraTarifas.setFechaSalida('2025-09-11 13:10'); // Cruza la medianoche
     const resultado = calculadoraTarifas.calcularTarifa();
-    expect(resultado.totalFormateado).toEqual('Total: Bs 248.00');
+    expect(resultado.totalFormateado).toEqual('Total: Bs 142.00');
   });
 });
-
-
 
 // 9
 describe("Aplicar TOPE diario de 50 Bs", () => {
