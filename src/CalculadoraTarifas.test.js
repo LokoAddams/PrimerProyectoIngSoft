@@ -63,8 +63,8 @@ describe("Calcular horas cobrables (redondeo hacia arriba)", () => {
 describe("Total NOCTURNO simple (22:00pm–06:00am a 6 Bs/h)", () => {
   it("Deberia calcular la tarifa para un periodo nocturno simple", () => {
     const calculadoraTarifas = new CalculadoraTarifas();
-    calculadoraTarifas.setFechaEntrada('2025-09-10 23:20');
-    calculadoraTarifas.setFechaSalida('2025-09-11 01:10'); // Cruza la medianoche
+    calculadoraTarifas.setFechaEntrada('2025-09-10 22:20');
+    calculadoraTarifas.setFechaSalida('2025-09-11 05:10'); // Cruza la medianoche
     const resultado = calculadoraTarifas.calcularTarifa();
     expect(resultado.totalFormateado).toEqual('Total: Bs 12.00');
   });

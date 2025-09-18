@@ -50,6 +50,18 @@ class CalculadoraTarifas {
     return { horasExactas, horasCobrables };
   }
 
+  #determinarTarifaAplicada() {
+    const horaEntrada = this.#fechaEntrada.getHours();
+    const horaSalida = this.#fechaSalida.getHours();
+
+    // Lógica simple para tarifa nocturna: si la mayor parte del tiempo es nocturno, se aplica tarifa nocturna.
+    // Esto es una simplificación para pasar el test actual.
+    const esPeriodoNocturno = (horaEntrada >= this.#inicioNocturno || horaEntrada < this.#finNocturno) &&
+                              (horaSalida >= this.#inicioNocturno || horaSalida < this.#finNocturno);
+
+    return esPeriodoNocturno ? this.#precioNocturnoHora : this.#precioNormalHora;
+  }
+
   calcularTarifa() {
     // Validación: si fechas no válidas, retorna un objeto de error
     if (!this.#fechaEntrada || !this.#fechaSalida) {
@@ -62,18 +74,11 @@ class CalculadoraTarifas {
 
     const { horasExactas, horasCobrables } = this.#calcularHorasCobrables(this.#fechaEntrada, this.#fechaSalida);
     
-    const horaEntrada = this.#fechaEntrada.getHours();
-    const horaSalida = this.#fechaSalida.getHours();
-
-    // Lógica simple para tarifa nocturna: si la mayor parte del tiempo es nocturno, se aplica tarifa nocturna.
-    // Esto es una simplificación para pasar el test actual.
-    const esPeriodoNocturno = (horaEntrada >= this.#inicioNocturno || horaEntrada < this.#finNocturno) &&
-                              (horaSalida >= this.#inicioNocturno || horaSalida < this.#finNocturno);
-
-    const tarifaAplicada = esPeriodoNocturno ? this.#precioNocturnoHora : this.#precioNormalHora;
+    const tarifaAplicada = this.#determinarTarifaAplicada();
     const total = horasCobrables * tarifaAplicada;
 
-    let detalles = `Horas exactas: ${horasExactas.toFixed(2)}. Horas a cobrar: ${horasCobrables}. Tarifa: ${tarifaAplicada} Bs/h.`;
+    let tarifaNombre = tarifaAplicada === this.#precioNocturnoHora ? "Nocturna" : "Normal";
+    let detalles = `Horas exactas: ${horasExactas.toFixed(2)}. Horas a cobrar: ${horasCobrables}. Tarifa ${tarifaNombre}: ${tarifaAplicada} Bs/h.`;
     if (horasCobrables > horasExactas) {
         detalles += ` (Se aplicó redondeo hacia arriba)`;
     }

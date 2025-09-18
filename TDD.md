@@ -63,7 +63,7 @@
 
 ## 7) Total NOCTURNO simple (22:00pm–06:00am a 6 Bs/h)
 
-* **ROJO:** `23:20 → 01:10` → **2 h × 6 = Bs 12.00**.
+* **ROJO:** `22:20 → 05:10` → **2 h × 6 = Bs 12.00**.
 * **VERDE:** detectar ventana nocturna y aplicar 6 Bs/h (redondeo).
 * **Refactor:** `calcularHorasNocturnas() + detalles`.
 * **Commits:**
@@ -71,13 +71,24 @@
    `feat: tarifa nocturna (6 Bs/h)` ·
     `refactor: función calcularHorasNocturnas + detalles`
 
+## 7.1) Total NOCTURNO complicado (10:00am–06:00am a 6 Bs/h solo horas dentro de ese rango)
+
+* **ROJO:** `10:20 → 01:10` → **2 h × 6 = Bs 12.00 de 22:00pm–06:00am** .
+* **VERDE:** detectar ventana nocturna y aplicar 6 Bs/h (redondeo).
+* **Refactor:** `calcularHorasNocturnas() + detalles`.
+* **Commits:**
+  `test: total nocturno  complicado (10:00am–06:00am a 6 Bs/h solo horas dentro de ese rango)` ·
+   `feat: tarifa nocturna  complicado (10:00am–06:00am a 6 Bs/h solo horas dentro de ese rango)` ·
+    `refactor: función calcularHorasNocturnas + detalles`
 ## 8) Separar por DÍAS con subtotales (cruce de medianoche)
 
 * **ROJO:** `21:00 → 01:15` → Día 1 ≈ **Bs 22.00**, Día 2 ≈ **Bs 12.00**, Total **Bs 34.00** (según desglose).
 * **VERDE:** cortar por día calendario y calcular subtotales por día.
 * **Refactor:** `partirPorDia(inicio, fin)`.
 * **Commits:**
-  `test: separa por días con subtotales` · `feat: desglose por día` · `refactor: función partirPorDia`
+  `test: separa por días con subtotales` · 
+  `feat: desglose por día` · 
+  `refactor: función partirPorDia`
 
 ## 10) Aplicar TOPE diario de 50 Bs
 
@@ -86,7 +97,9 @@
 * **VERDE:** aplicar tope 50 Bs por **cada día**.
 * **Refactor:** flag `topeAplicado` y campo `antesDeTope`.
 * **Commits:**
-  `test: aplica tope diario 50 Bs` · `feat: política de tope por día` · `refactor: marca topeAplicado`
+  `test: aplica tope diario 50 Bs` · 
+  `feat: política de tope por día` · 
+  `refactor: marca topeAplicado`
 
 ## 11) Aviso visual cuando un día llegó al TOPE
 
@@ -95,7 +108,8 @@
 * **VERDE:** renderizar aviso cuando `topeAplicado = true`.
 * **Refactor:** componente `AvisoTope(día)`.
 * **Commits:**
-  `test: muestra aviso de tope alcanzado` · `feat: marca visual de tope por día` · `refactor: componente AvisoTope`
+  `test: muestra aviso de tope alcanzado` · 
+  `feat: marca visual de tope por día` · `refactor: componente AvisoTope`
 
 ## 12) Varios días: tope por cada día + resumen
 

@@ -437,12 +437,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "522b93374efe249c070b446fcdfb09bbd77ecf34",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T10:18:34.000Z",
       "message": "feat: tarifa nocturna (6 Bs/h)",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/522b93374efe249c070b446fcdfb09bbd77ecf34"
     },
     "stats": {
       "total": 20,
@@ -454,5 +454,24 @@
     "test_count": 7,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T10:29:47.000Z",
+      "message": "refactor: función calcularHorasNocturnas() + detalles",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 51,
+      "additions": 35,
+      "deletions": 16,
+      "date": "2025-09-18"
+    },
+    "coverage": 97.56,
+    "test_count": 7,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]
