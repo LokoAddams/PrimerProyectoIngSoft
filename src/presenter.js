@@ -4,6 +4,7 @@ const calcularBtn = document.querySelector("#calcular");
 const resultadoDiv = document.querySelector("#resultado-fecha-entrada");
 const resultadoDivSalida = document.querySelector("#resultado-fecha-salida");
 const resultadoCalculo = document.querySelector("#resultado-calculo");
+const detallesCalculo = document.querySelector("#detalles-calculo");
 
 const iconoResultado = document.getElementById("icono-resultado");
 const calculadoraTarifas = new CalculadoraTarifas();
@@ -19,18 +20,15 @@ calcularBtn.addEventListener("click", () => {
   // Mostrar resultado del cálculo
   const resultado = calculadoraTarifas.calcularTarifa();
   // Icono de éxito o error
-  if (resultado && typeof resultado === 'string' && resultado.startsWith("Total: Bs")) {
-    iconoResultado.textContent = "✔️";
-    iconoResultado.style.color = "green";
-    resultadoCalculo.textContent = resultado ;
-  } else {
+  if (resultado.error) {
     iconoResultado.textContent = "❌";
     iconoResultado.style.color = "red";
-    if (resultado === undefined) {
-      resultadoCalculo.textContent = "Error en el cálculo. Verifique los datos de entrada.";
-    } else {
-      resultadoCalculo.textContent = resultado;
-    }
+    resultadoCalculo.textContent = resultado.error;
+    detallesCalculo.textContent = ""; // Limpiar detalles en caso de error
+  } else {
+    iconoResultado.textContent = "✔️";
+    iconoResultado.style.color = "green";
+    resultadoCalculo.textContent = resultado.totalFormateado;
+    detallesCalculo.textContent = resultado.detalles;
   }
-
 });

@@ -361,12 +361,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "d4ea09cb300955476a863ba21c43f36948bc7a3a",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T10:03:12.000Z",
       "message": "test: calcula horas cobrables con redondeo",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/d4ea09cb300955476a863ba21c43f36948bc7a3a"
     },
     "stats": {
       "total": 12,
@@ -378,5 +378,24 @@
     "test_count": 6,
     "failed_tests": 1,
     "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T10:09:38.000Z",
+      "message": "feat: lógica de horas cobrables con UI",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 54,
+      "additions": 33,
+      "deletions": 21,
+      "date": "2025-09-18"
+    },
+    "coverage": 96.67,
+    "test_count": 6,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]

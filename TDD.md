@@ -57,7 +57,7 @@
 * **Refactor:** `calcularHorasCobrables(inicio, fin)`.
 * **Commits:**
   `test: calcula horas cobrables con redondeo` ·
-  `feat: lógica de horas cobrables` · 
+  `feat: lógica de horas cobrables con UI` · 
   `refactor: función calcularHorasCobrables`
 
 ## 5) Total DIURNO simple (10 Bs/h)

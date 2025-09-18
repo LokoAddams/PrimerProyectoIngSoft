@@ -39,18 +39,28 @@ class CalculadoraTarifas {
   }
   #precioNormalHora = 10;
   calcularTarifa() {
-    // Validación: si fechas no válidas, retorna NaN
+    // Validación: si fechas no válidas, retorna un objeto de error
     if (!this.#fechaEntrada || !this.#fechaSalida) {
-      return undefined;
+      return { error: 'Formato de fecha inválido. Use YYYY-MM-DD HH:MM.' };
     }
     const msPorHora = 1000 * 60 * 60;
     const diffMs = this.#fechaSalida - this.#fechaEntrada;
     if (diffMs < 0) {
-      return 'La fecha de salida no puede ser anterior a la fecha de entrada.';
+      return { error: 'La fecha de salida no puede ser anterior a la fecha de entrada.' };
     }
-    const horas = (diffMs / msPorHora);
-    const total = horas * this.#precioNormalHora;
-    return `Total: Bs ${total.toFixed(2)}`;
+    const horasExactas = diffMs / msPorHora;
+    const horasCobrables = Math.ceil(horasExactas);
+    const total = horasCobrables * this.#precioNormalHora;
+
+    let detalles = `Horas exactas: ${horasExactas.toFixed(2)}. Horas a cobrar: ${horasCobrables}.`;
+    if (horasCobrables > horasExactas) {
+        detalles += ` (Se aplicó redondeo hacia arriba)`;
+    }
+
+    return {
+        totalFormateado: `Total: Bs ${total.toFixed(2)}`,
+        detalles: detalles
+    };
   }
 }
 export default CalculadoraTarifas;

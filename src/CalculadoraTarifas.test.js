@@ -33,7 +33,7 @@ describe("Error si CALCULAR no retorna nada", () => {
     calculadoraTarifas.setFechaEntrada('2025-09-10 20:00');
     calculadoraTarifas.setFechaSalida('2025-09-10 21:00');
     const resultado = calculadoraTarifas.calcularTarifa();
-    expect(resultado).toEqual('Total: Bs 10.00');
+    expect(resultado.totalFormateado).toEqual('Total: Bs 10.00');
   })
 })
 
@@ -44,7 +44,7 @@ describe("Error si la salida es antes que la entrada", () => {
     calculadoraTarifas.setFechaEntrada('2025-09-10 20:00');
     calculadoraTarifas.setFechaSalida('2025-09-10 19:30');
     const resultado = calculadoraTarifas.calcularTarifa();
-    expect(resultado).toEqual('La fecha de salida no puede ser anterior a la fecha de entrada.');
+    expect(resultado.error).toEqual('La fecha de salida no puede ser anterior a la fecha de entrada.');
   });
 });
 
@@ -55,6 +55,6 @@ describe("Calcular horas cobrables (redondeo hacia arriba)", () => {
     calculadoraTarifas.setFechaEntrada('2025-09-10 18:00');
     calculadoraTarifas.setFechaSalida('2025-09-10 21:10');
     const resultado = calculadoraTarifas.calcularTarifa();
-    expect(resultado).toEqual('Total: Bs 40.00');
+    expect(resultado.totalFormateado).toEqual('Total: Bs 40.00');
   });
 });
