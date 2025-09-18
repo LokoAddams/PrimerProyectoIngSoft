@@ -60,40 +60,16 @@
   `feat: lógica de horas cobrables con UI` · 
   `refactor: función calcularHorasCobrables`
 
-## 7) Total DIURNO simple (10 Bs/h)
 
-* **ROJO:** `18:00 → 21:10` (todo diurno) → **Bs 40.00** (4×10).
-* **VERDE:** multiplicar horas diurnas × 10 Bs.
-* **Refactor:** servicio `tarifas.diurno()`.
-* **Commits:**
-  `test: total diurno en un día` · `feat: tarifa diurna (10 Bs/h)` · `refactor: servicio tarifas.diurno()`
-
-## 6) Mostrar total con 2 decimales
-
-* **ROJO:** de `40` a **“Bs 40.00”**.
-  *Prueba:* `formatea_monto_dos_decimales`
-* **VERDE:** formateo monetario (2 decimales, prefijo Bs).
-* **Refactor:** util `formatearBs()`.
-* **Commits:**
-  `test: formatea montos a dos decimales` · `feat: formateo de dinero Bs` · `refactor: utilitario formatearBs`
-
-## 7) Total NOCTURNO simple (22:00–06:00 a 6 Bs/h)
+## 7) Total NOCTURNO simple (22:00pm–06:00am a 6 Bs/h)
 
 * **ROJO:** `23:20 → 01:10` → **2 h × 6 = Bs 12.00**.
-  *Prueba:* `calcula_total_nocturno_simple`
 * **VERDE:** detectar ventana nocturna y aplicar 6 Bs/h (redondeo).
-* **Refactor:** `calcularHorasNocturnas()`.
+* **Refactor:** `calcularHorasNocturnas() + detalles`.
 * **Commits:**
-  `test: total nocturno (22-06)` · `feat: tarifa nocturna (6 Bs/h)` · `refactor: función calcularHorasNocturnas`
-
-## 8) Combinar DIURNO + NOCTURNO con detalle
-
-* **ROJO:** `21:30 → 23:45` → diurno 0:30 (→1h=10) + nocturno 1:45 (→2h=12) = **Bs 22.00**.
-  *Prueba:* `combina_diurno_y_nocturno_con_detalle`
-* **VERDE:** partir el intervalo por ventanas y aplicar cada tarifa con su redondeo; mostrar desglose.
-* **Refactor:** modelo `DetalleDia` (líneas por segmento).
-* **Commits:**
-  `test: combina diurno+nocturno con detalle` · `feat: cálculo combinado con desglose` · `refactor: modelo DetalleDia`
+  `test: total nocturno (22-06)` ·
+   `feat: tarifa nocturna (6 Bs/h)` ·
+    `refactor: función calcularHorasNocturnas + detalles`
 
 ## 9) Separar por DÍAS con subtotales (cruce de medianoche)
 

@@ -399,12 +399,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "99c905a5e67244da381e4dfae1b61565b0dee1e9",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T10:11:41.000Z",
       "message": "refactor: función calcularHorasCobrables",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/99c905a5e67244da381e4dfae1b61565b0dee1e9"
     },
     "stats": {
       "total": 21,
@@ -416,5 +416,24 @@
     "test_count": 6,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T10:15:40.000Z",
+      "message": "test: total nocturno (22pm-06am)",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 45,
+      "additions": 16,
+      "deletions": 29,
+      "date": "2025-09-18"
+    },
+    "coverage": 96.88,
+    "test_count": 7,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]
