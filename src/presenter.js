@@ -29,6 +29,6 @@ calcularBtn.addEventListener("click", () => {
     iconoResultado.textContent = "✔️";
     iconoResultado.style.color = "green";
     resultadoCalculo.textContent = resultado.totalFormateado;
-    detallesCalculo.textContent = resultado.detalles;
+    detallesCalculo.innerHTML = resultado.detalles.replace(/\. /g, ".<br>");
   }
 });

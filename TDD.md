@@ -93,10 +93,9 @@
   `refactor: detalles UI`
 
 
-## 13) Ticket perdido = Bs 80.00 (anula cálculos)
+## 10) Ticket perdido = Bs 80.00 (anula cálculos)
 
 * **ROJO:** marcar “Ticket perdido = Sí” → total **Bs 80.00**, sin desglose.
-  *Prueba:* `ticket_perdido_sobrescribe_total`
 * **VERDE:** si `ticketPerdido=true`, devolver 80 y ocultar detalle.
 * **Refactor:** desactivar campos de hora si está perdido.
 * **Commits:**

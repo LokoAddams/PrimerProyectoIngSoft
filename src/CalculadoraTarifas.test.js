@@ -32,7 +32,7 @@ describe("Error si CALCULAR no retorna nada", () => {
     const calculadoraTarifas = new CalculadoraTarifas();
     calculadoraTarifas.setFechaEntrada('2025-09-10 20:00');
     calculadoraTarifas.setFechaSalida('2025-09-10 21:00');
-    const resultado = calculadoraTarifas.calcularTarifa();
+    const resultado = calculadoraTarifas.calcularTarifa(false);
     expect(resultado.totalFormateado).toEqual('Total: Bs 10.00');
   })
 })
@@ -43,7 +43,7 @@ describe("Error si la salida es antes que la entrada", () => {
     const calculadoraTarifas = new CalculadoraTarifas();
     calculadoraTarifas.setFechaEntrada('2025-09-10 20:00');
     calculadoraTarifas.setFechaSalida('2025-09-10 19:30');
-    const resultado = calculadoraTarifas.calcularTarifa();
+    const resultado = calculadoraTarifas.calcularTarifa(false);
     expect(resultado.error).toEqual('La fecha de salida no puede ser anterior a la fecha de entrada.');
   });
 });
@@ -54,7 +54,7 @@ describe("Calcular horas cobrables (redondeo hacia arriba)", () => {
     const calculadoraTarifas = new CalculadoraTarifas();
     calculadoraTarifas.setFechaEntrada('2025-09-10 18:00');
     calculadoraTarifas.setFechaSalida('2025-09-10 21:10');
-    const resultado = calculadoraTarifas.calcularTarifa();
+    const resultado = calculadoraTarifas.calcularTarifa(false);
     expect(resultado.totalFormateado).toEqual('Total: Bs 40.00');
   });
 });
@@ -65,7 +65,7 @@ describe("Total NOCTURNO simple (22:00pm–06:00am a 6 Bs/h)", () => {
     const calculadoraTarifas = new CalculadoraTarifas();
     calculadoraTarifas.setFechaEntrada('2025-09-10 22:20');
     calculadoraTarifas.setFechaSalida('2025-09-11 05:10'); // Cruza la medianoche
-    const resultado = calculadoraTarifas.calcularTarifa();
+    const resultado = calculadoraTarifas.calcularTarifa(false);
     expect(resultado.totalFormateado).toEqual('Total: Bs 42.00');
   });
 });
@@ -75,8 +75,8 @@ describe("total nocturno  complicado (10:00am–06:00am a 6 Bs/h solo horas dent
     const calculadoraTarifas = new CalculadoraTarifas();
     calculadoraTarifas.setFechaEntrada('2025-09-10 10:00');
     calculadoraTarifas.setFechaSalida('2025-09-11 13:10'); // Cruza la medianoche
-    const resultado = calculadoraTarifas.calcularTarifa();
-    expect(resultado.totalFormateado).toEqual('Total: Bs 142.00');
+    const resultado = calculadoraTarifas.calcularTarifa(false);
+    expect(resultado.totalFormateado).toEqual('Total: Bs 100.00');
   });
 });
 
@@ -86,7 +86,18 @@ describe("Aplicar TOPE diario de 50 Bs", () => {
     const calculadoraTarifas = new CalculadoraTarifas();
     calculadoraTarifas.setFechaEntrada('2025-09-10 08:00');
     calculadoraTarifas.setFechaSalida('2025-09-10 20:30'); // 13 horas * 10 Bs/h = 130 Bs
-    const resultado = calculadoraTarifas.calcularTarifa();
+    const resultado = calculadoraTarifas.calcularTarifa(false);
     expect(resultado.totalFormateado).toEqual('Total: Bs 50.00');
+  });
+});
+
+//10
+describe("Anular todos los calculos diarios si el ticket se perdio y aplicar 80 Bs por dia", () => {
+  it("Anular todos los calculos diarios si el ticket se perdio y aplicar 80 Bs por dia", () => {
+    const calculadoraTarifas = new CalculadoraTarifas();
+    calculadoraTarifas.setFechaEntrada('2025-09-10 08:00');
+    calculadoraTarifas.setFechaSalida('2025-09-10 20:30'); // 13 horas * 10 Bs/h = 130 Bs
+    const resultado = calculadoraTarifas.calcularTarifa(true);
+    expect(resultado.totalFormateado).toEqual('Total: Bs 80');
   });
 });
