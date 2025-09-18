@@ -190,12 +190,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c1260645d0ab463a8284e90b619fe46e4c9fc400",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-16T10:49:15.000Z",
       "message": "refactor: función común para formatear/validar horas",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/c1260645d0ab463a8284e90b619fe46e4c9fc400"
     },
     "stats": {
       "total": 66,
@@ -207,5 +207,24 @@
     "test_count": 3,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T04:22:51.000Z",
+      "message": "test: al presionar Calcular se actualiza total",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 33,
+      "additions": 22,
+      "deletions": 11,
+      "date": "2025-09-18"
+    },
+    "coverage": 100,
+    "test_count": 4,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]

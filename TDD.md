@@ -31,10 +31,19 @@
   `feat: ingresar y visualizar hora de salida` · 
   `refactor: función común para formatear/validar horas`
 
-## 3) Error si la salida es antes que la entrada
+## 4) Botón CALCULAR
+
+* **ROJO:** con datos cargados, al presionar **Calcular** se actualiza total.
+* **VERDE:** vincular botón a la función de cálculo y refrescar vista.
+* **Refactor:** mostrar mensaje de exito UI.
+* **Commits:**
+  `test: al presionar Calcular se actualiza total` · 
+  `feat: acción de cálculo en botón` · 
+  `refactor: mostrar mensaje de exito UI`
+
+## 4) Error si la salida es antes que la entrada
 
 * **ROJO:** entrada `20:00`, salida `19:30` → se ve “La salida no puede ser anterior a la entrada”.
-  *Prueba:* `valida_salida_no_antes_que_entrada`
 * **VERDE:** comparar fechas; si es inválido, mostrar mensaje y bloquear cálculo.
 * **Refactor:** util `showError(mensaje)`.
 * **Commits:**
@@ -130,14 +139,6 @@
 * **Commits:**
   `test: ticket perdido cobra 80` · `feat: penalidad ticket perdido` · `refactor: desactiva campos si perdido`
 
-## 14) Botón CALCULAR
-
-* **ROJO:** con datos cargados, al presionar **Calcular** se actualiza total + detalle.
-  *Prueba:* `boton_calcular_actualiza_resultados`
-* **VERDE:** vincular botón a la función de cálculo y refrescar vista.
-* **Refactor:** separar UI de la lógica (controlador/servicio).
-* **Commits:**
-  `test: botón calcular actualiza` · `feat: acción de cálculo en botón` · `refactor: separar UI de lógica`
 
 ## 15) Botón LIMPIAR
 
