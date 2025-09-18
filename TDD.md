@@ -71,7 +71,7 @@
    `feat: tarifa nocturna (6 Bs/h)` ·
     `refactor: función calcularHorasNocturnas + detalles`
 
-## 7.1) Total NOCTURNO complicado (10:00am–06:00am a 6 Bs/h solo horas dentro de ese rango)
+## 8) Total NOCTURNO complicado (10:00am–06:00am a 6 Bs/h solo horas dentro de ese rango)
 
 * **ROJO:** `10:20 → 13:10(dia siguiente)` → **2 h × 6 = Bs 12.00 de 22:00pm–06:00am** .
 * **VERDE:** detectar ventana nocturna y aplicar 6 Bs/h (redondeo).
@@ -82,35 +82,16 @@
     `refactor: detalles UI + fix: se estaba contando un dia de mas`
 
 
-## 10) Aplicar TOPE diario de 50 Bs
+## 9) Aplicar TOPE diario de 50 Bs
 
 * **ROJO:** `08:00 → 20:30` (mismo día) → antes del tope **Bs 130.00**, cobro día = **Bs 50.00**.
-  *Prueba:* `aplica_tope_diario_por_dia`
 * **VERDE:** aplicar tope 50 Bs por **cada día**.
 * **Refactor:** flag `topeAplicado` y campo `antesDeTope`.
 * **Commits:**
   `test: aplica tope diario 50 Bs` · 
   `feat: política de tope por día` · 
-  `refactor: marca topeAplicado`
+  `refactor: detalles UI`
 
-## 11) Aviso visual cuando un día llegó al TOPE
-
-* **ROJO:** si un día alcanzó 50, se ve “**Tope alcanzado (Día X)**”.
-  *Prueba:* `muestra_aviso_tope_alcanzado`
-* **VERDE:** renderizar aviso cuando `topeAplicado = true`.
-* **Refactor:** componente `AvisoTope(día)`.
-* **Commits:**
-  `test: muestra aviso de tope alcanzado` · 
-  `feat: marca visual de tope por día` · `refactor: componente AvisoTope`
-
-## 12) Varios días: tope por cada día + resumen
-
-* **ROJO:** `Vie 10:00 → Lun 09:00` → resumen por día (ej. Día1=50, Día2=50, Día3=50, Día4=…) + **Total**.
-  *Prueba:* `aplica_tope_varios_dias_con_resumen`
-* **VERDE:** iterar días, aplicar tope, sumar y construir resumen final.
-* **Refactor:** `resumenPorDia(listaDias)`.
-* **Commits:**
-  `test: tope en varios días con resumen` · `feat: resumen multi-día con topes` · `refactor: función resumenPorDia`
 
 ## 13) Ticket perdido = Bs 80.00 (anula cálculos)
 
@@ -122,38 +103,3 @@
   `test: ticket perdido cobra 80` · `feat: penalidad ticket perdido` · `refactor: desactiva campos si perdido`
 
 
-## 15) Botón LIMPIAR
-
-* **ROJO:** al presionar **Limpiar**, entradas y resultados quedan vacíos.
-  *Prueba:* `boton_limpiar_restaurar_estado`
-* **VERDE:** resetear estado (entradas, total, desglose).
-* **Refactor:** función `resetEstado()` reutilizable.
-* **Commits:**
-  `test: botón limpiar resetea` · `feat: acción limpiar` · `refactor: función resetEstado`
-
-## 16) Recordar últimos datos (opcional)
-
-* **ROJO:** activo “Recordar últimos datos” → cierro y vuelvo, aparecen mis últimos datos.
-  *Prueba:* `recuerda_ultimos_datos_activado`
-* **VERDE:** guardar/leer estado simple (p.ej., localStorage) cuando el toggle está “on”.
-* **Refactor:** módulo `almacenamiento()`.
-* **Commits:**
-  `test: recuerda últimos datos` · `feat: recordar últimos datos (opcional)` · `refactor: módulo almacenamiento`
-
-## 17) Botón COPIAR total
-
-* **ROJO:** al presionar **Copiar**, el valor (ej. “Bs 22.00”) queda listo para pegar y la UI muestra “Copiado”.
-  *Prueba:* `copia_total_al_portapapeles`
-* **VERDE:** generar texto del total y llamar API de copiar (o fallback); mostrar confirmación.
-* **Refactor:** `getTextoTotal()` reutilizable.
-* **Commits:**
-  `test: copia total para pegar` · `feat: acción copiar total` · `refactor: util getTextoTotal`
-
-## 18) AYUDA con reglas (diurno/nocturno/tope)
-
-* **ROJO:** al abrir **Ayuda**, veo reglas en lenguaje simple con ejemplos.
-  *Prueba:* `muestra_ayuda_reglas_de_cobro`
-* **VERDE:** panel/modal con contenido estático claro.
-* **Refactor:** componente `Ayuda()`.
-* **Commits:**
-  `test: muestra ayuda con reglas` · `feat: panel de ayuda de reglas` · `refactor: componente Ayuda`

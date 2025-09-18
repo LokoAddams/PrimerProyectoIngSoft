@@ -79,3 +79,16 @@ describe("total nocturno  complicado (10:00am–06:00am a 6 Bs/h solo horas dent
     expect(resultado.totalFormateado).toEqual('Total: Bs 248.00');
   });
 });
+
+
+
+// 9
+describe("Aplicar TOPE diario de 50 Bs", () => {
+  it("Deberia aplicar el tope diario de 50 Bs si el costo excede ese monto en un solo dia", () => {
+    const calculadoraTarifas = new CalculadoraTarifas();
+    calculadoraTarifas.setFechaEntrada('2025-09-10 08:00');
+    calculadoraTarifas.setFechaSalida('2025-09-10 20:30'); // 13 horas * 10 Bs/h = 130 Bs
+    const resultado = calculadoraTarifas.calcularTarifa();
+    expect(resultado.totalFormateado).toEqual('Total: Bs 50.00');
+  });
+});
