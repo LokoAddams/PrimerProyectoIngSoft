@@ -209,17 +209,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "7aa9e616be2cf0e656898a4f0c23ca9e3617eebf",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T04:22:51.000Z",
       "message": "test: al presionar Calcular se actualiza total",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/7aa9e616be2cf0e656898a4f0c23ca9e3617eebf"
     },
     "stats": {
       "total": 33,
       "additions": 22,
       "deletions": 11,
+      "date": "2025-09-18"
+    },
+    "coverage": 100,
+    "test_count": 4,
+    "failed_tests": 1,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T04:36:26.000Z",
+      "message": "test: al presionar Calcular se actualiza total",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 5,
+      "deletions": 5,
       "date": "2025-09-18"
     },
     "coverage": 100,

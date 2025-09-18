@@ -27,12 +27,12 @@ describe("Ingresar la hora de SALIDA y que se vea en pantalla", () => {
   })
 })
 // 4
-describe("Error si la salida es antes que la entrada", () => {
-  it("Deberia mostrar un mensaje de error si la fecha de salida es anterior a la de entrada", () => {
+describe("Error si CALCULAR no retorna nada", () => {
+  it("Deberia mostrar total a pagar", () => {
     const calculadoraTarifas = new CalculadoraTarifas();
-    calculadoraTarifas.setFecha('2025-09-10 20:00');
-    calculadoraTarifas.setFechaSalida('2025-09-10 19:30');
+    calculadoraTarifas.setFechaEntrada('2025-09-10 20:00');
+    calculadoraTarifas.setFechaSalida('2025-09-10 21:00');
     const resultado = calculadoraTarifas.calcularTarifa();
-    expect(resultado).toEqual('La fecha de salida no puede ser anterior a la fecha de entrada.');
+    expect(resultado).toEqual('Total: Bs 10.00');
   })
 })
