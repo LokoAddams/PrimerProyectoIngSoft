@@ -247,17 +247,36 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "f561a9dbc6d723137f072125cc94cd86790ee564",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T04:43:46.000Z",
       "message": "feat: acción de cálculo en botón",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/f561a9dbc6d723137f072125cc94cd86790ee564"
     },
     "stats": {
       "total": 37,
       "additions": 26,
       "deletions": 11,
+      "date": "2025-09-18"
+    },
+    "coverage": 100,
+    "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T04:48:28.000Z",
+      "message": "refactor: mostrar mensaje de exito o fallo en UI",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 19,
+      "additions": 16,
+      "deletions": 3,
       "date": "2025-09-18"
     },
     "coverage": 100,

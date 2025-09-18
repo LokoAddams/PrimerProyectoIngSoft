@@ -39,7 +39,7 @@
 * **Commits:**
   `test: al presionar Calcular no retorna nada` · 
   `feat: acción de cálculo en botón` · 
-  `refactor: mostrar mensaje de exito UI`
+  `refactor: mostrar mensaje de exito o fallo en UI`
 
 ## 4) Error si la salida es antes que la entrada
 

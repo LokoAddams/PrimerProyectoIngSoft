@@ -7,6 +7,7 @@ const resultadoCalculo = document.createElement("div");
 resultadoCalculo.id = "resultado-calculo";
 document.body.appendChild(resultadoCalculo);
 
+const iconoResultado = document.getElementById("icono-resultado");
 const calculadoraTarifas = new CalculadoraTarifas();
 calcularBtn.addEventListener("click", () => {
   const fechaEntrada = document.querySelector("#fecha-entrada").value;
@@ -18,5 +19,14 @@ calcularBtn.addEventListener("click", () => {
   const fechaFormateadaSalida = calculadoraTarifas.obtenerFechaSalidaFormateada();
   resultadoDivSalida.textContent = fechaFormateadaSalida;
   // Mostrar resultado del cálculo
-  resultadoCalculo.textContent = calculadoraTarifas.calcularTarifa();
+  const resultado = calculadoraTarifas.calcularTarifa();
+  resultadoCalculo.textContent = resultado;
+  // Icono de éxito o error
+  if (resultado && resultado.startsWith("Total: Bs") && !resultado.includes("NaN")) {
+    iconoResultado.textContent = "✔️";
+    iconoResultado.style.color = "green";
+  } else {
+    iconoResultado.textContent = "❌";
+    iconoResultado.style.color = "red";
+  }
 });
