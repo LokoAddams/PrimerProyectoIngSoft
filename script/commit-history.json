@@ -323,12 +323,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c4f057791a60d26c618b9bc2b4f28d5a4c68292c",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T05:02:50.000Z",
       "message": "refactor: utilitario showError",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/c4f057791a60d26c618b9bc2b4f28d5a4c68292c"
     },
     "stats": {
       "total": 9,
@@ -337,6 +337,25 @@
       "date": "2025-09-18"
     },
     "coverage": 96.3,
+    "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T09:56:49.000Z",
+      "message": "fix: bug UI total a pagar",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 54,
+      "additions": 29,
+      "deletions": 25,
+      "date": "2025-09-18"
+    },
+    "coverage": 96.15,
     "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"

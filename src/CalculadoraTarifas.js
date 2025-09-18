@@ -41,12 +41,11 @@ class CalculadoraTarifas {
   calcularTarifa() {
     // Validación: si fechas no válidas, retorna NaN
     if (!this.#fechaEntrada || !this.#fechaSalida) {
-      return NaN;
+      return undefined;
     }
     const msPorHora = 1000 * 60 * 60;
     const diffMs = this.#fechaSalida - this.#fechaEntrada;
     if (diffMs < 0) {
-      // Si salida < entrada, retorna NaN para que la UI muestre error
       return 'La fecha de salida no puede ser anterior a la fecha de entrada.';
     }
     const horas = (diffMs / msPorHora);
@@ -54,4 +53,4 @@ class CalculadoraTarifas {
     return `Total: Bs ${total.toFixed(2)}`;
   }
 }
-module.exports = CalculadoraTarifas;
+export default CalculadoraTarifas;

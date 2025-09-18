@@ -50,14 +50,16 @@
   `test: no da error si salida < entrada` · 
   `feat: validación de horario (salida >= entrada)` · `refactor: utilitario showError`
 
-## 4) Calcular horas cobrables (redondeo hacia arriba)
+## 6) Calcular horas cobrables (redondeo hacia arriba)
 
 * **ROJO:** `18:00 → 21:10` → **4 horas**.
   *Prueba:* `calcula_horas_cobrables_redondeo_arriba`
 * **VERDE:** diferencia de tiempo con redondeo hacia arriba por fracción.
 * **Refactor:** `calcularHorasCobrables(inicio, fin)`.
 * **Commits:**
-  `test: calcula horas cobrables con redondeo` · `feat: lógica de horas cobrables` · `refactor: función calcularHorasCobrables`
+  `test: calcula horas cobrables con redondeo` ·
+  `feat: lógica de horas cobrables` · 
+  `refactor: función calcularHorasCobrables`
 
 ## 5) Total DIURNO simple (10 Bs/h)
 

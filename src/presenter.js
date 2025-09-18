@@ -3,9 +3,7 @@ import CalculadoraTarifas from "./CalculadoraTarifas.js";
 const calcularBtn = document.querySelector("#calcular");
 const resultadoDiv = document.querySelector("#resultado-fecha-entrada");
 const resultadoDivSalida = document.querySelector("#resultado-fecha-salida");
-const resultadoCalculo = document.createElement("div");
-resultadoCalculo.id = "resultado-calculo";
-document.body.appendChild(resultadoCalculo);
+const resultadoCalculo = document.querySelector("#resultado-calculo");
 
 const iconoResultado = document.getElementById("icono-resultado");
 const calculadoraTarifas = new CalculadoraTarifas();
@@ -21,19 +19,18 @@ calcularBtn.addEventListener("click", () => {
   // Mostrar resultado del cálculo
   const resultado = calculadoraTarifas.calcularTarifa();
   // Icono de éxito o error
-  if (resultado && resultado.startsWith("Total: Bs") && !resultado.includes("NaN")) {
+  if (resultado && typeof resultado === 'string' && resultado.startsWith("Total: Bs")) {
     iconoResultado.textContent = "✔️";
     iconoResultado.style.color = "green";
-    resultadoCalculo.textContent = resultado;
+    resultadoCalculo.textContent = resultado ;
   } else {
     iconoResultado.textContent = "❌";
     iconoResultado.style.color = "red";
-    if(isNaN(resultado)){
-      resultadoCalculo.textContent = "Total : Error en el cálculo.Verifique datos de entrada.";
-    }
-    else{
+    if (resultado === undefined) {
+      resultadoCalculo.textContent = "Error en el cálculo. Verifique los datos de entrada.";
+    } else {
       resultadoCalculo.textContent = resultado;
-      
     }
   }
+
 });
