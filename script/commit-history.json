@@ -228,12 +228,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "df85ee0103a8d8591b1534c6eead97c2fc3a5caa",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T04:36:26.000Z",
       "message": "test: al presionar Calcular se actualiza total",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/df85ee0103a8d8591b1534c6eead97c2fc3a5caa"
     },
     "stats": {
       "total": 10,
@@ -245,5 +245,24 @@
     "test_count": 4,
     "failed_tests": 1,
     "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T04:43:46.000Z",
+      "message": "feat: acción de cálculo en botón",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 37,
+      "additions": 26,
+      "deletions": 11,
+      "date": "2025-09-18"
+    },
+    "coverage": 100,
+    "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]

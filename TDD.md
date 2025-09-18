@@ -6,7 +6,7 @@
 * **Refactor:** nombres claros (ej. `entradaHora`).
 * **Commits:**
 
-  1. `test: muestra hora de entrada en pantalla`
+  1. `test: no muestra hora de entrada en pantalla`
   2. `feat: ingresar y visualizar hora de entrada`
   3. `refactor: nombres claros para campo de entrada`
 
@@ -17,7 +17,7 @@
 * **Refactor:** hacer objeto "calculadoraTarifas" tarifas global para presenter.js y setter
 * **Commits:**
 
-  1. `test: formato invalido`
+  1. `test: no valida formato invalido`
   2. `feat: retornar y visualizar mensaje de formato invalido`
   3. `refactor: hacer objeto "calculadoraTarifas" tarifas global para presenter.js y setter` 
 
@@ -27,17 +27,17 @@
 * **VERDE:** guardar y mostrar hora de salida.
 * **Refactor:** función común para formatear/validar horas.
 * **Commits:**
-  `test: muestra hora de salida en pantalla` · 
+  `test: no muestra hora de salida en pantalla` · 
   `feat: ingresar y visualizar hora de salida` · 
   `refactor: función común para formatear/validar horas`
 
 ## 4) Botón CALCULAR
 
-* **ROJO:** con datos cargados, al presionar **Calcular** se actualiza total.
-* **VERDE:** vincular botón a la función de cálculo y refrescar vista.
+* **ROJO:** al presionar **Calcular** no se retorna nada.
+* **VERDE:** con datos cargados, al presionar **Calcular** se actualiza total.
 * **Refactor:** mostrar mensaje de exito UI.
 * **Commits:**
-  `test: al presionar Calcular se actualiza total` · 
+  `test: al presionar Calcular no retorna nada` · 
   `feat: acción de cálculo en botón` · 
   `refactor: mostrar mensaje de exito UI`
 

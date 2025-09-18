@@ -37,5 +37,14 @@ class CalculadoraTarifas {
   obtenerFechaSalidaFormateada() {
     return this.#formatearFecha(this.#fechaSalida);
   }
+  #precioNormalHora = 10;
+  calcularTarifa() {
+    // Calculo básico: diferencia en horas, redondeo hacia arriba, tarifa fija 10 Bs/h
+    const msPorHora = 1000 * 60 * 60;
+    const diffMs = this.#fechaSalida - this.#fechaEntrada;
+    const horas = (diffMs / msPorHora);
+    const total = horas * this.#precioNormalHora;
+    return `Total: Bs ${total.toFixed(2)}`;
+  }
 }
 module.exports = CalculadoraTarifas;
