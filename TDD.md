@@ -53,7 +53,6 @@
 ## 6) Calcular horas cobrables (redondeo hacia arriba)
 
 * **ROJO:** `18:00 → 21:10` → **4 horas**.
-  *Prueba:* `calcula_horas_cobrables_redondeo_arriba`
 * **VERDE:** diferencia de tiempo con redondeo hacia arriba por fracción.
 * **Refactor:** `calcularHorasCobrables(inicio, fin)`.
 * **Commits:**

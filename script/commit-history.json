@@ -342,12 +342,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "3d3817865b217e822faa0d512c73ff2bdcfc9a69",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-09-18T09:56:49.000Z",
       "message": "fix: bug UI total a pagar",
-      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/3d3817865b217e822faa0d512c73ff2bdcfc9a69"
     },
     "stats": {
       "total": 54,
@@ -359,5 +359,24 @@
     "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-09-18T10:03:12.000Z",
+      "message": "test: calcula horas cobrables con redondeo",
+      "url": "https://github.com/LokoAddams/PrimerProyectoIngSoft/commit/HEAD"
+    },
+    "stats": {
+      "total": 12,
+      "additions": 11,
+      "deletions": 1,
+      "date": "2025-09-18"
+    },
+    "coverage": 96.15,
+    "test_count": 6,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]

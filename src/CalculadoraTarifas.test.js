@@ -47,3 +47,14 @@ describe("Error si la salida es antes que la entrada", () => {
     expect(resultado).toEqual('La fecha de salida no puede ser anterior a la fecha de entrada.');
   });
 });
+
+// 6
+describe("Calcular horas cobrables (redondeo hacia arriba)", () => {
+  it("Deberia redondear hacia arriba la fraccion de hora", () => {
+    const calculadoraTarifas = new CalculadoraTarifas();
+    calculadoraTarifas.setFechaEntrada('2025-09-10 18:00');
+    calculadoraTarifas.setFechaSalida('2025-09-10 21:10');
+    const resultado = calculadoraTarifas.calcularTarifa();
+    expect(resultado).toEqual('Total: Bs 40.00');
+  });
+});
